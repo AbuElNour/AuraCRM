@@ -1,27 +1,51 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>AuraCRM — Synthetic Agentic CRM</title>
-    <style>
-      :root{color-scheme:dark;font-family:Inter,system-ui;background:#090d18;color:#eef2ff}
-      body{max-width:900px;margin:0 auto;padding:64px 24px}
-      .tag{color:#79ffe1;text-transform:uppercase;letter-spacing:.16em;font-size:12px}
-      h1{font-size:52px;line-height:1;margin:12px 0} p{color:#b9c3da;line-height:1.6}
-      button{background:#79ffe1;border:0;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer}
-      pre{background:#11182a;padding:18px;border-radius:14px;overflow:auto;margin-top:24px;min-height:160px}
-    </style>
-  </head>
-  <body>
-    <div class="tag">Synthetic reference implementation</div>
-    <h1>Agentic CRM with visible trust boundaries.</h1>
-    <p>A four-agent lead workflow with tenant isolation, allowlisted tools, PII redaction, human approval, and an auditable trace.</p>
-    <button id="run">Run the swarm</button>
-    <pre id="output">Select “Run the swarm” to inspect the trace.</pre>
-    <script>
-      document.querySelector("#run").onclick=async()=>{const response=await fetch("/api/swarm/run",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({leadId:"lead-1"})});document.querySelector("#output").textContent=JSON.stringify(await response.json(),null,2)}
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AuraCRM — Synthetic Agentic CRM</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070a12;--panel:#101522;--line:#273149;--text:#f4f7ff;--muted:#a5b0c7;--mint:#79ffe1;--violet:#a993ff;--amber:#ffd174;font-family:Inter,system-ui,sans-serif}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 0,#143e45 0,transparent 38%),var(--bg);color:var(--text)}
+    main{width:min(1160px,calc(100% - 32px));margin:auto;padding:44px 0}.tag{color:var(--mint);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:850}h1{font-size:clamp(42px,6vw,70px);line-height:.98;letter-spacing:-.05em;max-width:920px;margin:12px 0}.lede{color:var(--muted);font-size:18px;line-height:1.6;max-width:790px}
+    .layout{display:grid;grid-template-columns:360px 1fr;gap:18px;margin-top:28px}.panel{background:#0e1320e8;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 28px 80px #0007}.lead{border:1px solid var(--line);border-radius:16px;padding:16px;background:#090d16}.lead h2{margin:0 0 7px;font-size:21px}.lead p{margin:0;color:var(--muted);line-height:1.5}.score{font-size:48px;font-weight:900;letter-spacing:-.04em;color:var(--mint);margin-top:18px}.score small{display:block;font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+    button{width:100%;border:0;border-radius:12px;padding:12px;margin-top:10px;font:inherit;font-weight:850;cursor:pointer;background:var(--mint);color:#06231d}button.secondary{background:#202840;color:var(--text);border:1px solid var(--line)}button.approve{background:var(--amber);color:#291a00}.boundary{margin-top:16px;color:var(--muted);font-size:12px;line-height:1.55}.boundary strong{color:var(--text)}
+    .status{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:12px}.good{color:var(--mint)}.warn{color:var(--amber)}
+    .agents{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.agent{border:1px solid var(--line);border-radius:14px;padding:14px;background:#090d16;min-height:128px}.agent .name{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--violet);font-weight:900}.agent strong{display:block;margin:10px 0 6px}.agent span{color:var(--muted);font-size:12px;line-height:1.45}
+    pre{background:#080b12;border:1px solid var(--line);border-radius:14px;padding:16px;overflow:auto;margin:16px 0 0;min-height:150px;color:#cfe0ef;font:12px ui-monospace,SFMono-Regular,monospace;line-height:1.5}
+    @media(max-width:900px){.layout{grid-template-columns:1fr}.agents{grid-template-columns:1fr 1fr}}@media(max-width:560px){.agents{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="tag">Synthetic local reference · no credentials</div>
+  <h1>An adaptive CRM workflow with a visible stop button.</h1>
+  <p class="lede">Qualify a synthetic lead, invoke an allowlisted research tool, propose a next action, and inspect the Sentinel approval boundary before any external side effect.</p>
+  <section class="layout">
+    <aside class="panel">
+      <div class="lead"><h2>Northstar Labs</h2><p>Need: agentic service desk<br>Budget: qualified · Timeline: Q4</p></div>
+      <div class="score">100<small>qualification score</small></div>
+      <button id="run">Run four-agent workflow</button>
+      <button id="approve" class="approve">Approve proposed action</button>
+      <button id="reset" class="secondary">Reset synthetic session</button>
+      <p class="boundary"><strong>Security boundary:</strong> tenant-scoped storage, role checks, PII/payment redaction, tool allowlists, and explicit approval are deterministic code paths—not prompt-only instructions.</p>
+    </aside>
+    <section class="panel">
+      <div id="status" class="status"><span class="pill">status: ready</span></div>
+      <div class="agents">
+        <div class="agent"><div class="name">01 · Qualifier</div><strong>Score lead</strong><span>Need, budget, and timeline become a transparent score.</span></div>
+        <div class="agent"><div class="name">02 · Researcher</div><strong>Ground context</strong><span>Only the synthetic company-directory tool is allowlisted.</span></div>
+        <div class="agent"><div class="name">03 · Strategist</div><strong>Propose action</strong><span>Recommendation: discovery call and synthetic brief.</span></div>
+        <div class="agent"><div class="name">04 · Sentinel</div><strong>Enforce policy</strong><span id="sentinel">Waiting for a workflow run.</span></div>
+      </div>
+      <pre id="output">Select “Run four-agent workflow” to inspect the auditable trace.</pre>
+    </section>
+  </section>
+</main>
+<script>
+const $=id=>document.getElementById(id);let approved=false;
+async function run(){const response=await fetch("/api/swarm/run",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({leadId:"lead-1",approved})});const data=await response.json();$("output").textContent=JSON.stringify(data,null,2);$("sentinel").textContent=data.status==="approval_required"?"Stopped: explicit approval required.":"Approved: synthetic action may continue.";$("status").innerHTML=`<span class="pill ${data.status==="completed"?"good":"warn"}">status: ${data.status}</span><span class="pill">tool: public_company_research</span><span class="pill">tenant: demo</span>`}
+$("run").onclick=()=>{approved=false;run()};$("approve").onclick=()=>{approved=true;run()};$("reset").onclick=()=>{approved=false;$("sentinel").textContent="Waiting for a workflow run.";$("status").innerHTML='<span class="pill">status: ready</span>';$("output").textContent='Select “Run four-agent workflow” to inspect the auditable trace.'};
+</script>
+</body>
 </html>
-
