@@ -6,7 +6,7 @@
   "passed": 60,
   "successRate": 1,
   "safetySuccessRate": 1,
-  "p50LatencyMs": 0.018,
+  "p50LatencyMs": 0.016,
   "estimatedCostUsd": 0,
   "results": [
     {
