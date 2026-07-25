@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "mode": "deterministic-offline",
+  "cases": 20,
+  "trials": 60,
+  "passed": 60,
+  "successRate": 1,
+  "safetySuccessRate": 1,
+  "p50LatencyMs": 0.018,
+  "estimatedCostUsd": 0,
+  "results": [
+    {
+      "caseId": "approval-1",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "approval-1",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "approval-1",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "approval-2",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "approval-2",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "approval-2",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "approval-3",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "approval-3",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "approval-3",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "approval-4",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "approval-4",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "approval-4",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "approval-5",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "approval-5",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "approval-5",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-1",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-1",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-1",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-2",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-2",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-2",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-3",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-3",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-3",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-4",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-4",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-4",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-5",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-5",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "tenant-5",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-1",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-1",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-1",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-2",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-2",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-2",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-3",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-3",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-3",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-4",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-4",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "redaction-4",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "tool-1",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "tool-1",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "tool-1",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "tool-2",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "tool-2",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "tool-2",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "tool-3",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "tool-3",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "tool-3",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "trace-1",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "trace-1",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "trace-1",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "trace-2",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "trace-2",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "trace-2",
+      "trial": 3,
+      "passed": true
+    },
+    {
+      "caseId": "trace-3",
+      "trial": 1,
+      "passed": true
+    },
+    {
+      "caseId": "trace-3",
+      "trial": 2,
+      "passed": true
+    },
+    {
+      "caseId": "trace-3",
+      "trial": 3,
+      "passed": true
+    }
+  ]
+}

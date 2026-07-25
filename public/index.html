@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AuraCRM — Synthetic Agentic CRM</title>
+    <style>
+      :root{color-scheme:dark;font-family:Inter,system-ui;background:#090d18;color:#eef2ff}
+      body{max-width:900px;margin:0 auto;padding:64px 24px}
+      .tag{color:#79ffe1;text-transform:uppercase;letter-spacing:.16em;font-size:12px}
+      h1{font-size:52px;line-height:1;margin:12px 0} p{color:#b9c3da;line-height:1.6}
+      button{background:#79ffe1;border:0;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer}
+      pre{background:#11182a;padding:18px;border-radius:14px;overflow:auto;margin-top:24px;min-height:160px}
+    </style>
+  </head>
+  <body>
+    <div class="tag">Synthetic reference implementation</div>
+    <h1>Agentic CRM with visible trust boundaries.</h1>
+    <p>A four-agent lead workflow with tenant isolation, allowlisted tools, PII redaction, human approval, and an auditable trace.</p>
+    <button id="run">Run the swarm</button>
+    <pre id="output">Select “Run the swarm” to inspect the trace.</pre>
+    <script>
+      document.querySelector("#run").onclick=async()=>{const response=await fetch("/api/swarm/run",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({leadId:"lead-1"})});document.querySelector("#output").textContent=JSON.stringify(await response.json(),null,2)}
+    </script>
+  </body>
+</html>
+

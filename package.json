@@ -1,0 +1,19 @@
+{
+  "name": "aura-crm-reference",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Agentic CRM reference with tenant isolation, MCP-style tools, swarm orchestration, and evals",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "demo": "node src/demo.mjs",
+    "test": "node --test",
+    "eval": "node evals/run.mjs",
+    "check": "npm test && npm run eval"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
+
